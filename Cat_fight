@@ -1,0 +1,30 @@
+<?php
+
+class Cat {
+    public $age;
+    public $weight;
+    public $strength;
+    function __construct($age,$weight,$strength){
+      $this->age = $age;
+      $this->weigth = $weight;
+      $this->strength = $strength;
+    }
+    function getAge(){return $this->age;}
+    function getWeight(){return $this->weigth;}
+    function getStength(){return $this->strength;}
+    function fight($anotherCat){
+      $i;
+      $j;
+      ($this->getAge() > $anotherCat->getAge()) ? $i++ : $j++;
+      ($this->getWeight() > $anotherCat->getWeight()) ? $i++ : $j++;
+      ($this->getStength() > $anotherCat->getStength()) ? $i++ : $j++;
+      return ($i>$j);
+      }
+  }
+
+$cat1 = new Cat(10,5,11);
+$cat2 = new Cat(9,11,12);
+$result = $cat1->fight($cat2);
+
+echo $result?"Winner Cat1":"Winner Cat2";
+?>
