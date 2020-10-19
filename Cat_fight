@@ -13,8 +13,8 @@ class Cat {
     function getWeight(){return $this->weigth;}
     function getStength(){return $this->strength;}
     function fight($anotherCat){
-      $i;
-      $j;
+      $i=0;
+      $j=0;
       ($this->getAge() > $anotherCat->getAge()) ? $i++ : $j++;
       ($this->getWeight() > $anotherCat->getWeight()) ? $i++ : $j++;
       ($this->getStength() > $anotherCat->getStength()) ? $i++ : $j++;
